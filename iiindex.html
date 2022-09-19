@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: #800080;
+        text-decoration: underline;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: #ffff00;
+        padding: 100px;
+        margin: 20px 50px 100px 50px;
+      }
+      h1:hover {
+        background-color: palevioletred;
+        text-decoration-color: mediumseagreen;
+        transition: all 2ms linear;
+      }
+      h2 {
+        text-align: center;
+        color: rgb(0, 100, 0);
+        font-size: 25px;
+        font-weight: bold;
+      }
+      body {
+        background-color: white;
+      }
+      p {
+        text-align: center;
+      }
+      button {
+        margin: 0 auto 30 auto;
+        color: red;
+        padding: 20px 30px;
+        font-weight: bold;
+        font-size: medium;
+        border-radius: 30px;
+        border-color: red;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 2ms ease-in-out;
+      }
+      button:hover {
+        background: red;
+        color: purple;
+        cursor: pointer;
+      }
+      img {
+        width: 200px;
+        display: block;
+        margin: 50px auto 0 auto;
+        padding: 20px;
+        background-color: chartreuse;
+        border: 10px solid purple;
+        border-radius: 30px;
+      }
+
+      ul {
+        padding: 0px;
+        list-style: none;
+        text-align: center;
+      }
+      li {
+        list-style: none;
+
+        display: inline;
+        padding: 20px;
+        text-decoration: none;
+      }
+      .code {
+        text-align: center;
+      }
+      .Email {
+        color: #800080;
+      }
+      .instagram {
+        color: #800080;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SheCodes</h1>
+    <h2>coding workshop</h2>
+    <p><button>Apply now</button></p>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI7c1-gQ6ZYFu_98FiMvait0IxouLCf0G1eUGZybTA&s"
+      alt="woman coding"
+    />
+    <h3>
+      <ul>
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+      </ul>
+    </h3>
+    <div class="code">
+      <span class="Email">Email </span><span>hello@SheCodes.io</span
+      ><span class="instagram">instagram:</span> <span> @sheCodes.io</span>
+    </div>
+    <script>
+      function application() {
+        let name = prompt("what is your first name?");
+        let age = prompt("What is your age?");
+        let heading = document.querySelector("h1");
+        if (age >= 18) {
+          heading.innerHTML = "Hi " + name + "! Welcome to SheCodes";
+        } else {
+          heading.innerHTML = "You cannot join shecodes";
+        }
+      }
+
+      let applyButton = document.querySelector("button");
+      applyButton.addEventListener("click", application);
+    </script>
+  </body>
+</html>
